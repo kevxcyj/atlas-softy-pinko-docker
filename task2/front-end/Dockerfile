@@ -15,4 +15,5 @@ EXPOSE 5252
 ENV FLASK_APP=api.py
 
 
+
 CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=5252"]
