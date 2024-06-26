@@ -2,5 +2,7 @@ version: '3.4'
 
 services:
   atlassoftypinkodocker:
-    image:
+    image: atlassoftypinkodocker
     build:
+      context: .
+      dockerfile: ./Dockerfile
