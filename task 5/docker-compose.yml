@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  atlassoftypinkodocker:
+    image: atlassoftypinkodocker
+    build:
+      context: .
+      dockerfile: ./Dockerfile
