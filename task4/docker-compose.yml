@@ -1,5 +1,6 @@
 services:
   back-end:
+    image: atlassoftypinkodocker-backend
     build:
       context: ./back-end
       dockerfile: Dockerfile
