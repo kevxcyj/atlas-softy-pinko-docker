@@ -1,8 +1,25 @@
-version: '3.8'
-
 services:
-  atlassoftypinkodocker:
-    image: atlassoftypinkodocker
+  back-end:
     build:
-      context: .
-      dockerfile: ./Dockerfile
+      context: ./back-end
+      dockerfile: Dockerfile
+    ports:
+      - "5252"
+    depends_on:
+      - proxy
+
+  front-end:
+    build:
+      context: ./front-end
+      dockerfile: Dockerfile
+    ports:
+      - "9000"
+    depends_on:
+      - proxy
+
+  proxy:
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
